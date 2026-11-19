@@ -12,3 +12,9 @@ class DataValidationArtifacts:
     error_message:str
     report_file_path:str
 
+#all filepaths where transformed data is saved trainsfomed (train,test,object)
+@dataclass
+class DataTransformationArifacts:
+    train_transformed_file_path:str
+    test_transformed_file_path:str 
+    obj_transformed_file_path:str #obj stands for object

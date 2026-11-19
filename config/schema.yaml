@@ -38,3 +38,18 @@ num_features:
 
 mm_columns:
   - Annual_Premium
+
+ordinal_encoding_cols:
+  - Vehicle_Age
+
+target_encoding_cols:
+  - Policy_Sales_Channel
+  - Region_Code
+
+rs_cols:
+  - Annual_Premium
+
+ss_cols:
+  - Age
+  - Vintage
+  
