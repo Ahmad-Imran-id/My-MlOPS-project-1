@@ -18,3 +18,16 @@ class DataTransformationArifacts:
     train_transformed_file_path:str
     test_transformed_file_path:str 
     obj_transformed_file_path:str #obj stands for object
+
+@dataclass
+class ClassificationMetricArtifact:
+    accuracy_score:float
+    f1_score:float
+    precision_score:float
+    recall_score:float
+@dataclass
+class ModelTrainerArtifact:
+    trained_model_file_path:str 
+    metric_artifact:ClassificationMetricArtifact
+
+

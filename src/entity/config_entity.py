@@ -1,6 +1,7 @@
 from src.constants import *
 from dataclasses import dataclass
 from datetime import datetime
+import os
 
 '''This is a file where we difine all the paths where we need to store data'''
 
@@ -50,4 +51,11 @@ class DataTranformationConfig:
     test_transformed_file_path:str=os.path.join(data_tansfromed_dir,'test_transformed.npy')
     obj_file_path:str=(os.path.join(data_tansfromed_dir,DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,
                                     PREPROCSSING_OBJECT_FILE_NAME))
+
+
+@dataclass 
+class ModelTrainerConfing:
+    model_dir:str=os.path.join(train_config_obj.artifact_dir,MODEL_TRAINER_DIR_NAME)
+    trained_model_file_path:str=os.path.join(model_dir,MODEL_TRAINER_TRAINED_MODEL_DIR,MODEL_TRAINER_TRAINED_MODEL_NAME)
+    model_config_yaml_path:str=MODEL_TRAINER_MODEL_CONFIG_FILE_PATH
     
